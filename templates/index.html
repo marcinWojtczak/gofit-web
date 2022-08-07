@@ -11,6 +11,9 @@
     <header id="main">
         <nav class="navbar">
             <div class="main-nav">
+                <div class="menu-btn">
+                    <img src="{{ url_for('static', filename='images/menu-40.png')}}" alt="">
+                </div>
                 <a href="#main"><img src="{{ url_for('static', filename='images/logo.png')}}" alt="" class="logo"></a>
                 <ul class="nav-list">
                     <li class="nav-list-item"><a href="#main" class="nav-link">Start</a></li>
@@ -171,13 +174,13 @@
                         <img src="{{ url_for ('static', filename='images/logo_wr.png')}}" alt="">
                     </div>
                 </div>
-                <div class="box box-nav">
+                <div class="box-nav">
                     <a href="#main" class="nav-link"><p>Start</p></a>
                     <a href="#offer" class="nav-link"><p>Oferta</p></a>
                     <a href="#about" class="nav-link"><p>O Nas</p></a>
                     <a href="#contact" class="nav-link"><p>Kontakt</p></a>
                 </div>
-                <div class="box box-media">
+                <div class="box-media">
                     <p>Linkedin</p>
                     <p>Facebook</p>
                     <p>Instagram</p>
@@ -186,7 +189,7 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/script.js')}}"></script>
 </body>
 </html> 

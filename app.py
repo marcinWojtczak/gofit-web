@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import os
 
 
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 mail = Mail(app)
@@ -21,6 +22,18 @@ mail_settings = {
 
 app.config.update(mail_settings)
 mail = Mail(app)
+
+
+# AWS_ACCESS_KEY_ID = os.environ.get['AWS_ACCESS_KEY_ID'],
+# AWS_SECRET_ACCESS_KEY = os.environ.get['AWS_SECRET_ACCESS_KEY']
+# AWS_STORAGE_BUCKET_NAME= os.environ.get['AWS_STORAGE_BUCKET_NAME']
+
+# s3 = boto3.client(
+#     's3',
+#     aws_access_key_id=AWS_ACCESS_KEY_ID,
+#     aws_secret_access_key=AWS_SECRET_ACCESS_KEY
+# )
+
 
 
 # Main Page
@@ -45,6 +58,13 @@ def main():
         return render_template('index.html')
 
 
+@app.route('/files')
+def files():
+    s3_resource = botot3.resource('s3')
+    my_bucket  = s3_resource.Bucket(AWS_STORAGE_BUCKET_NAME)
+    summaries = my_bucket.objects.all()
+
+    return render_template("files.html", my_bucket=my_bucket, files=summaries)
 
 if __name__ == "__main__":
     app.run(debug=True)
