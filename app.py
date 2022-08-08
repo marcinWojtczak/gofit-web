@@ -3,13 +3,16 @@ from flask_mail import Mail, Message
 from markupsafe import escape
 import smtplib
 from dotenv import load_dotenv
+from flask_s3 import FlaskS3
 import os
 
 
 
+
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+app.config['AWS_STORAGE_BUCKET_NAME'] = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 mail = Mail(app)
+s3 = FlaskS3()
 
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
@@ -25,6 +28,10 @@ mail = Mail(app)
 
 
 # Main Page
+def start_app():
+    app = Flask(__name__)
+    s3.init_app(app)
+    return app
 
 @app.route('/', methods=["POST", "GET"])
 def main():
@@ -46,3 +53,7 @@ def main():
         return render_template('index.html')
 
 
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
