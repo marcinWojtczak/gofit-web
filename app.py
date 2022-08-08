@@ -13,6 +13,7 @@ app = Flask(__name__)
 app.config['AWS_STORAGE_BUCKET_NAME'] = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 mail = Mail(app)
 s3 = FlaskS3()
+s3.init_app(app)
 
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
@@ -28,10 +29,6 @@ mail = Mail(app)
 
 
 # Main Page
-def start_app():
-    app = Flask(__name__)
-    s3.init_app(app)
-    return app
 
 @app.route('/', methods=["POST", "GET"])
 def main():
