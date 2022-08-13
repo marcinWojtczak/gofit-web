@@ -3,21 +3,13 @@ from flask_mail import Mail, Message
 from markupsafe import escape
 import smtplib
 from dotenv import load_dotenv
-from flask_s3 import FlaskS3
 import os
-import boto3
 from whitenoise import WhiteNoise
-
-
 
 
 app = Flask(__name__)
 app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/")
-app.config['FLASK3_BUCKET_BUCKET_NAME'] = str(os.getenv('FLASK3_BUCKET_BUCKET_NAME'))
 mail = Mail(app)
-s3 = FlaskS3(app)
-
-
 
 
 mail_settings = {
