@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 
 class Config:
     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')

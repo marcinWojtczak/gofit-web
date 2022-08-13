@@ -5,6 +5,7 @@ import smtplib
 from dotenv import load_dotenv
 from flask_s3 import FlaskS3
 import os
+import boto3
 
 
 
@@ -14,6 +15,8 @@ app.config['AWS_STORAGE_BUCKET_NAME'] = str(os.getenv('AWS_STORAGE_BUCKET_NAME')
 mail = Mail(app)
 s3 = FlaskS3()
 s3.init_app(app)
+
+
 
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
