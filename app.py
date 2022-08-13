@@ -10,7 +10,7 @@ import os
 
 
 app = Flask(__name__)
-app.config['AWS_STORAGE_BUCKET_NAME'] = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+app.config['AWS_STORAGE_BUCKET_NAME'] = str(os.getenv('AWS_STORAGE_BUCKET_NAME'))
 mail = Mail(app)
 s3 = FlaskS3()
 s3.init_app(app)
@@ -20,8 +20,8 @@ mail_settings = {
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": os.environ.get('MAIL_USERNAME'),
-    "MAIL_PASSWORD": os.environ.get('MAIL_PASSWORD'),
+    "MAIL_USERNAME": str(os.getenv('MAIL_USERNAME')),
+    "MAIL_PASSWORD": str(os.getenv('MAIL_PASSWORD')),
 }
 
 app.config.update(mail_settings)
@@ -37,7 +37,7 @@ def main():
         company_name = request.form['company_name']
         email = request.form['email']
         message = request.form['message']
-        msg = Message(subject, sender=f"{email}", recipients=[os.environ.get('MAIL_USERNAME'),])
+        msg = Message(subject, sender=f"{email}", recipients=[str(os.getenv('MAIL_USERNAME')),])
         msg.body= """
         Temat: {subject}
         Nazwa Firmy: {company_name}
