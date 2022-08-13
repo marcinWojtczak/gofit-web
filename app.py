@@ -11,10 +11,10 @@ import boto3
 
 
 app = Flask(__name__)
-app.config['AWS_STORAGE_BUCKET_NAME'] = str(os.getenv('AWS_STORAGE_BUCKET_NAME'))
+app.config['FLASK3_BUCKET_BUCKET_NAME'] = str(os.getenv('FLASK3_BUCKET_BUCKET_NAME'))
 mail = Mail(app)
-s3 = FlaskS3()
-s3.init_app(app)
+s3 = FlaskS3(app)
+
 
 
 
