@@ -353,6 +353,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 100%;
         
     }
 
@@ -471,6 +472,7 @@ footer {
         display: flex;
         width: 50%; 
         flex-direction: column;
+        width: 100%;
 
     }
 
