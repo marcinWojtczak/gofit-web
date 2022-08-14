@@ -3,7 +3,6 @@ from flask_mail import Mail, Message
 from markupsafe import escape
 import smtplib
 from dotenv import load_dotenv
-import os
 from whitenoise import WhiteNoise
 
 
