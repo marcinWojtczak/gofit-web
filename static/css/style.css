@@ -57,6 +57,7 @@ h1 {
 h3 {
     font-size: 20px;
     font-weight: var(--fw-semiBolt);
+    color:white;
 }
 
 p {
@@ -170,7 +171,7 @@ footer {
 
     .main-nav ul li:hover {
     border-bottom: 1px solid var(--clr-dark);
-} 
+    } 
 
     .nav-list-item a {
         color: var(--clr-dark);
@@ -247,14 +248,12 @@ footer {
 .showcase {
     width: 100%;
     min-height: 650px;
-    background: url("../images/main_bw.jpg") no-repeat right;
+    background: url("../images/main_bw.jpg") no-repeat center;
     background-size: cover;
     background-color: var(--clr-light);
     padding: 48px 30px; 
     margin-bottom: 0px;
 }
-
-
 
 .main-title {
     width: 40%;
@@ -271,6 +270,17 @@ footer {
     font-weight: var(--fw-normal);
     font-size: 15px;
 }   
+
+@media(max-width: 770px){
+    .showcase {
+        width: 100%;
+        background: url("../images/main_bw_830.jpg") no-repeat center;
+        background-size: cover;
+        background-color: var(--clr-light);
+        padding: 48px 30px; 
+        margin-bottom: 0px;
+    }
+}
 
 /* section movies */
 .container {
@@ -366,18 +376,27 @@ footer {
 
 .offer {
     width: 100%;
-    background: var(--clr-dark);
     display: flex;
+    background-color: var(--clr-light);
     flex-direction: column;
     justify-content:center ;
     align-items: center;
-    gap: 5px;
-    padding: 30px 0;
+    gap: 10px;
+    padding: 30px 0px; 
     
 }
 
+/* .movie {
+    display: flex;
+    background: white;
+    color: #191B1D;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 30px 0px; 
+    gap: 5px;
+} */
+
 .offer .box-1 {
-    background:var(--clr-light);
     display: flex;
     width: 95%;
     padding: 15px 0;
@@ -396,49 +415,82 @@ footer {
     width: 95%;
     flex-direction: row;
     justify-content: space-between; 
+    margin-top: 50px;
 }
 
+
 .box-2 .offer-card {
-    width: 33%;
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    width: 30%;
+    /* background: white; */
+    background: linear-gradient(180deg, rgba(237,24,52,1) 5%, rgba(0,0,0,1) 85%);
+    /* color: var(--clr-dark); */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 0px 15px 1px rgba(25, 27, 29, 1);
+    
 }
 
-.offer-card h4 {
-    margin-bottom: 20px;
+.offer-card h2 {
+    margin: 20px 10px 40px 10px;
 }
 
-.offer-card p {
-    margin-bottom: 5px; 
+.offer-card h3 {
+    color:white;
 }
 
-.offer-card p:before {
+
+.offer-card h5 {
+    margin: 10px 10px 60px 10px;
+    color: white; 
+}
+
+.offer-card h5:before {
     content: '•';
     margin-right: 10px;
-    color: var(--clr-light);
-}
-
-.offer-card strong {
-    color: var(--clr-primary);
+    color: white;
 }
 
 
 .offer .box-3 {
-    background:var(--clr-light);
     display: flex;
     width: 95%;
-    padding: 15px 20px;
+    padding: 50px 20px;
     color: var(--clr-dark);
     align-items: center;
-    border-bottom: 5px solid white;
 }
 
 .info p{
     margin: 5px;
+}
+
+@media (max-width: 900px){
+    .offer .box-2 {
+        display: flex;
+        width: 50%; 
+        flex-direction: column;
+
+    }
+
+    .box-2 .offer-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .offer .box-3 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 20px 50px 20px;
+        color: var(--clr-dark);
+        align-items: center;
+}
+
+
 }
 
 /* showcase team */
@@ -512,12 +564,14 @@ footer {
     background: var(--clr-primary);
 }
 
-@media(max-width: 900px) {
+@media(max-width: 908px) {
     .team {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+
+
 
     .team .trainer {
         width: 100%;
