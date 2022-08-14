@@ -349,6 +349,13 @@ footer {
 }
 
 @media (max-width: 910px) {
+
+    .container {
+    width: 100%;
+    padding: 10px 10px;
+    background-color: white;
+    }
+
     .movie {
         display: flex;
         flex-direction: column;
@@ -468,6 +475,10 @@ footer {
 }
 
 @media (max-width: 900px){
+    .box-2 {
+        width: 100%;
+    }
+
     .offer .box-2 {
         display: flex;
         width: 50%; 
