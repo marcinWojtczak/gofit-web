@@ -4,6 +4,7 @@ from markupsafe import escape
 import smtplib
 from dotenv import load_dotenv
 from whitenoise import WhiteNoise
+import os
 
 
 app = Flask(__name__)
