@@ -156,10 +156,10 @@ footer {
 
     .logo:nth-of-type(1) {
         order: 1;
-        margin-left: 60px;
-        width: 142px;
-        height: 48px;
-        margin-top: 5px;
+        margin: 0 10px 0 50px;
+        width: 128px;
+        height: 43px;
+        margin-top: 10px;
     }
     
     .menu-btn {
