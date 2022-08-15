@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     <title>GoFit</title>
 </head>
+
 <body>
     <header id="main">
         <nav class="navbar">
@@ -14,13 +16,17 @@
                 <div class="menu-btn">
                     <img src="{{ url_for('static', filename='images/menu-40.png')}}" alt="">
                 </div>
-                <a href="#main"><img src="{{ url_for('static', filename='images/logo.png')}}" alt="" class="logo"></a>
-                <ul class="nav-list">
-                    <li class="nav-list-item"><a href="#main" class="nav-link">Start</a></li>
-                    <li class="nav-list-item"><a href="#offer" class="nav-link">Oferta</a></li>
-                    <li class="nav-list-item"><a href="#about" class="nav-link">O Nas</a></li>
-                    <li class="nav-list-item"><a href="#contact" class="nav-link">Kontakt</a></li>
-                </ul>
+                <div class="logo">
+                    <a href="#main"><img src="{{ url_for('static', filename='images/logo.png')}}" alt="" class="logo"></a>
+                </div>
+                <div class="menu">
+                    <ul class="nav-list">
+                        <li class="nav-list-item"><a href="#main" class="nav-link">Start</a></li>
+                        <li class="nav-list-item"><a href="#offer" class="nav-link">Oferta</a></li>
+                        <li class="nav-list-item"><a href="#about" class="nav-link">O Nas</a></li>
+                        <li class="nav-list-item"><a href="#contact" class="nav-link">Kontakt</a></li>
+                    </ul>
+                </div>
 
                 <div class="nav-media">
                     <div class="instagram-icon">
@@ -41,25 +47,30 @@
     <section class="showcase">
         <main class="main">
             <h1 class="main-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-            <p class="main-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, illum ipsam harum laborum, aut corporis quibusdam iure in suscipit doloremque aspernatur magni laudantium quas error! Optio porro quo aliquam minima?
+            <p class="main-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, illum ipsam harum
+                laborum, aut corporis quibusdam iure in suscipit doloremque aspernatur magni laudantium quas error!
+                Optio porro quo aliquam minima?
             </p>
             <p>
-            <a href="#offer" class="btn btn-primary">Oferta dla firm</a>
-            <a href="#offer" class="btn btn-outline">Oferta indywidualna</a>
+                <a href="#offer" class="btn btn-primary">Oferta dla firm</a>
+                <a href="#offer" class="btn btn-outline">Oferta indywidualna</a>
             </p>
         </main>
     </section>
-    
+
     <div class="container">
         <section class="movie">
             <div class="about">
                 <h1 class="title">Co robimy</h1>
-                <p class="describe">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, totam fugiat nulla dicta temporibus
-                explicabo laboriosam, aspernatur rerum ab eum id sunt cumque molestias a animi repellendus non qui. Amet?</p>
+                <p class="describe">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, totam fugiat nulla
+                    dicta temporibus
+                    explicabo laboriosam, aspernatur rerum ab eum id sunt cumque molestias a animi repellendus non qui.
+                    Amet?</p>
             </div>
             <div class="frame">
                 <div class="player">
-                    <iframe src="https://www.youtube.com/embed/_hNNaj4zd5w?rel=0" width="560" height="315" title="GoFit [original]"frameborder="0"></iframe> 
+                    <iframe src="https://www.youtube.com/embed/_hNNaj4zd5w?rel=0" width="560" height="315"
+                        title="GoFit [original]" frameborder="0"></iframe>
                 </div>
             </div>
         </section>
@@ -104,14 +115,24 @@
             <div class="box-3">
                 <div class="info">
                     <ul>
-                        <li><p><strong>Czas trwania treningu:</strong> do 30min</p></li>
-                        <li><p><strong>Miejsce treningu:</strong> przestrzeń biurowa, sala konferencyjna</p></li>
-                        <li><p><strong>Ubiór:</strong>strój codzienny, wygodne obuwie na płaskiej podeszwie</p></li>
-                        <li><p><strong>Data ważności:</strong>:treningi ważne są 30 dni od daty rozpoczęcia zajęć</p></li>
-                        <li><p><strong>Ceny podane w tabeli są cenami brutto</strong></p></li>
+                        <li>
+                            <p><strong>Czas trwania treningu:</strong> do 30min</p>
+                        </li>
+                        <li>
+                            <p><strong>Miejsce treningu:</strong> przestrzeń biurowa, sala konferencyjna</p>
+                        </li>
+                        <li>
+                            <p><strong>Ubiór:</strong>strój codzienny, wygodne obuwie na płaskiej podeszwie</p>
+                        </li>
+                        <li>
+                            <p><strong>Data ważności:</strong>:treningi ważne są 30 dni od daty rozpoczęcia zajęć</p>
+                        </li>
+                        <li>
+                            <p><strong>Ceny podane w tabeli są cenami brutto</strong></p>
+                        </li>
                     </ul>
                 </div>
-            </div> 
+            </div>
         </section>
 
         <section class="team" id="about">
@@ -123,10 +144,15 @@
                     <h2>Marcin Wojtczak</h2>
                     <h5>Trener Przygotwania Motorycznegoy</h5>
                     <h5>Trener Medyczny</h5>
-                    <h5>Trener Personalny</h5 >
+                    <h5>Trener Personalny</h5>
                 </div>
                 <div class="describe">
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque numquam accusamus nobis atque consequuntur explicabo aperiam neque distinctio incidunt reiciendis minus perspiciatis aspernatur esse, soluta officiis reprehenderit eligendi, doloribus culpa dolore, assumenda corporis animi. Tenetur soluta rerum facilis at doloribus ea officia exercitationem pariatur possimus. Debitis atque rerum sequi ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. In quia dolores ab dicta eaque obcaecati voluptate possimus molestias? Debitis, ex.
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque numquam accusamus nobis atque
+                        consequuntur explicabo aperiam neque distinctio incidunt reiciendis minus perspiciatis
+                        aspernatur esse, soluta officiis reprehenderit eligendi, doloribus culpa dolore, assumenda
+                        corporis animi. Tenetur soluta rerum facilis at doloribus ea officia exercitationem pariatur
+                        possimus. Debitis atque rerum sequi ducimus. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. In quia dolores ab dicta eaque obcaecati voluptate possimus molestias? Debitis, ex.
                     </p>
                 </div>
             </div>
@@ -141,7 +167,12 @@
                     <h5>Trener Personalny</h5>
                 </div>
                 <div class="describe">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet commodi eos officiis cupiditate iusto ducimus molestiae provident vero possimus deleniti. Nesciunt aliquam veniam dolorum odit tempore odio consequuntur repudiandae sint sunt corrupti hic quas eius sit quos dolores nobis consequatur necessitatibus libero unde amet, illum facere quis, laborum quaerat? Corrupti, temporibus dolores. Accusantium sit molestiae, porro, earum nam laborum illo facilis quo ab id laboriosam, distinctio rerum expedita necessitatibus ratione?
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet commodi eos officiis cupiditate
+                        iusto ducimus molestiae provident vero possimus deleniti. Nesciunt aliquam veniam dolorum odit
+                        tempore odio consequuntur repudiandae sint sunt corrupti hic quas eius sit quos dolores nobis
+                        consequatur necessitatibus libero unde amet, illum facere quis, laborum quaerat? Corrupti,
+                        temporibus dolores. Accusantium sit molestiae, porro, earum nam laborum illo facilis quo ab id
+                        laboriosam, distinctio rerum expedita necessitatibus ratione?
                     </p>
                 </div>
             </div>
@@ -153,7 +184,8 @@
             <div class="contact-form">
                 <div class="header">
                     <h1>Skontaktuj sie z nami</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla rem et non ipsam veritatis! Cumque nostrum corrupti ad facilis eligendi?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla rem et non ipsam veritatis!
+                        Cumque nostrum corrupti ad facilis eligendi?</p>
                 </div>
                 <div class="card-box">
                     <div class="container-1">
@@ -184,10 +216,18 @@
                     </div>
                 </div>
                 <div class="box-nav">
-                    <a href="#main" class="nav-link"><p>Start</p></a>
-                    <a href="#offer" class="nav-link"><p>Oferta</p></a>
-                    <a href="#about" class="nav-link"><p>O Nas</p></a>
-                    <a href="#contact" class="nav-link"><p>Kontakt</p></a>
+                    <a href="#main" class="nav-link">
+                        <p>Start</p>
+                    </a>
+                    <a href="#offer" class="nav-link">
+                        <p>Oferta</p>
+                    </a>
+                    <a href="#about" class="nav-link">
+                        <p>O Nas</p>
+                    </a>
+                    <a href="#contact" class="nav-link">
+                        <p>Kontakt</p>
+                    </a>
                 </div>
                 <div class="box-media">
                     <p>Linkedin</p>
@@ -198,7 +238,8 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/script.js')}}"></script>
 </body>
-</html> 
+
+</html>
