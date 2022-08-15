@@ -156,7 +156,7 @@ footer {
 
     .logo:nth-of-type(1) {
         order: 1;
-        margin: 0 10px 0 50px;
+        margin-left: 20px;
         width: 128px;
         height: 43px;
         margin-top: 10px;
@@ -165,6 +165,7 @@ footer {
     .menu-btn {
         display: block;
         margin-top: 0px;
+        left: 10px;
     }
 
     .menu-btn:hover {
@@ -206,6 +207,10 @@ footer {
         font-weight: var(--fw-medium);
         font-size: 14px;
     }
+
+    .nav-media {
+    margin-left: 5px; 
+}
 
 }
 
