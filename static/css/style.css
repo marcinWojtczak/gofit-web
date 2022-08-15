@@ -79,7 +79,6 @@ nav {
     z-index: 100;
 }
 
-
 footer {
     background: var(--clr-dark);
 }
@@ -142,16 +141,15 @@ footer {
     .main-nav {
         display: flex;
         justify-content: space-between; 
-
-}
+    }
 
     .logo:nth-of-type(1) {
         order: 1;
-        margin-left: 70px;
+        margin-left: 60px;
         width: 142px;
         height: 48px;
         margin-top: 5px;
-}
+    }
     
     .menu-btn {
         display: block;
@@ -290,11 +288,13 @@ footer {
 @media(max-width: 770px){
     .showcase {
         width: 100%;
-        background: url("../images/main_bw_830.jpg") no-repeat center;
+        background: url("../images/main_bw_830.jpg") no-repeat center; 
         background-size: cover;
         background-color: var(--clr-light);
         padding: 48px 30px; 
-        margin-bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -540,18 +540,18 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
         "pic name name"
-        "describe describe describe"
+        "describe describe describe";
+    padding: 20px;
 }    
 
 .pic-1 {
     background: url('../images/marcin-bt.png') no-repeat;
     background-size: cover;
     grid-area: pic;
+    justify-items: center; 
     height: 280px;
     width: 180px;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+
 }
 
 .pic-2 {
@@ -560,9 +560,6 @@ footer {
     grid-area: pic;
     height: 280px;
     width: 180px;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .name {
@@ -591,19 +588,27 @@ footer {
     background: var(--clr-primary);
 }
 
-@media(max-width: 908px) {
+@media(max-width: 950px) {
     .team {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-
-
     .team .trainer {
         width: 100%;
         height: 50%;
     } 
+
+    .pic-1 {
+        height: 224px;
+        width: 144px;
+    }
+
+    .pic-2 {
+        height: 224px;
+        width: 144px;
+    }
 
     .trainer div {
         padding: 30px;
@@ -712,6 +717,10 @@ footer {
         display: flex;
         flex-direction: column;
     }
+
+    .container-1 form {
+    width: 100%;
+    }
 }
 
 /* footer container */
@@ -795,11 +804,11 @@ footer {
     }
 
     .box-nav .nav-link {
-        margin: 0 20px;
+        margin: 0 10px;
     }
 
     .container-2 .box-media {
-        margin: 5px;
+        /* margin: 5px; */
     }
 
     .box-media p {
