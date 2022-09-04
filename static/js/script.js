@@ -1,8 +1,15 @@
-const navigationHeight = document.querySelector('.navbar').offsetHeight;
+const navigationHeight = document.querySelector('.nav').offsetHeight;
 
-console.log(document.documentElement);
+document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 'px');
 
-document.documentElement.style.setProperty('--scroll-padding', navigationHeight + "px");
 
-document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.nav-list').classList.toggle('show'));
+const animation = [document.querySelector('.button'), document.querySelector('.menu-wrap'), document.querySelector('hamburger-btn')]
+
+animation.forEach(function(item){
+    item.addEventListener('click', () => document.querySelector('.menu-wrap').classList.toggle('show'));
+    item.addEventListener('click', () => document.querySelector('.hamburger-btn').classList.toggle('change'));
+    item.addEventListener('click', () => document.querySelector('.line').classList.toggle('change'));
+})
+
+
 

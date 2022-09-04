@@ -5,235 +5,293 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     <title>GoFit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
 </head>
 
 <body>
     <header id="main">
-        <nav class="navbar">
-            <div class="main-nav">
-                <div class="menu-btn">
-                    <img src="{{ url_for('static', filename='images/menu-40.png')}}" alt="">
-                </div>
-                <div class="logo">
-                    <a href="#main"><img src="{{ url_for('static', filename='images/logo.png')}}" alt="" class="logo"></a>
-                </div>
-                <div class="menu">
+        <nav class="nav">
+            <a href="#main"><img src="{{ url_for('static', filename='img/logo.svg')}}" width="178" height="61" class="logo"></a>
+            <div class="menu-wrap">
+                <div class="main-nav">
                     <ul class="nav-list">
                         <li class="nav-list-item"><a href="#main" class="nav-link">Start</a></li>
+                        <li class="nav-list-item"><a href="#what-we-do" class="nav-link">Co robimy</a></li>
                         <li class="nav-list-item"><a href="#offer" class="nav-link">Oferta</a></li>
-                        <li class="nav-list-item"><a href="#about" class="nav-link">O Nas</a></li>
+                        <li class="nav-list-item"><a href="#team" class="nav-link">Zespół</a></li>
                         <li class="nav-list-item"><a href="#contact" class="nav-link">Kontakt</a></li>
                     </ul>
                 </div>
 
-                <div class="nav-media">
+                <div class="media-icon">
+                    <div class="facebook-icon">
+                        <img src="{{ url_for ('static', filename='img/facebook-35.png')}}">
+                    </div>
                     <div class="instagram-icon">
-                        <img src="{{ url_for ('static', filename='images/instagram-35.png')}}" alt="">
+                        <img src="{{ url_for ('static', filename='img/instagram-35.png')}}">
                     </div>
                     <div class="linkedin-icon">
-                        <img src="{{ url_for ('static', filename='images/linkedin-35.png')}}" alt="">
+                        <a href="https://www.linkedin.com/company/10136406/" target="_blank" alt=""><img
+                        src="{{ url_for ('static', filename='img/linkedin-35.png')}}"></a>
                     </div>
-                    <div class="facebook-icon">
-                        <img src="{{ url_for ('static', filename='images/facebook-35.png')}}" alt="">
-                    </div>
+                </div>
+            </div>
+
+            <div class="button">
+                <div class="hamburger-btn ">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
                 </div>
             </div>
         </nav>
+
+        <div class="main main-img">
+            <h1 class="main-title">„Zespół, który ma efektywnie pracować,
+                potrzebuje narzędzi umożliwiających mu taką pracę.”</h1>
+            <p class="main-intro">Zadbaj o zdrowie swoje i swoich pracowników. GoFit to program prozdrowotnych zajęć w
+                miejscu pracy który wpływa pozytywnie na zdrowie psychiczne i fizyczne pracowników oraz sprzyja
+                budowaniu pozytwnej atmosfery w zespole.</p>
+            <a href="#offer" class="btn btn-primary">Sprawdź oferta dla firm</a>
+            <!-- <a href="" class="btn btn-outline">Oferta indywidualna</a> -->
+        </div>
     </header>
 
-
-    <section class="showcase">
-        <main class="main">
-            <h1 class="main-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-            <p class="main-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, illum ipsam harum
-                laborum, aut corporis quibusdam iure in suscipit doloremque aspernatur magni laudantium quas error!
-                Optio porro quo aliquam minima?
-            </p>
-            <p>
-                <a href="#offer" class="btn btn-primary">Oferta dla firm</a>
-                <a href="#offer" class="btn btn-outline">Oferta indywidualna</a>
-            </p>
-        </main>
+    <section id="what-we-do">
+        <div class="movie">
+            <div class="info">
+                <h1>Co robimy</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis id perferendis necessitatibus velit
+                    explicabo illo? Tempore nihil architecto, praesentium molestias at voluptatibus, ipsum optio nobis
+                    deleniti. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni temporibus maxime magnam,
+                    quo nostrum aut similique nesciunt possimus velit libero.</p>
+            </div>
+            <div class="player">
+                <iframe src="https://www.youtube.com/embed/_hNNaj4zd5w?rel=0" width="560" height="315"
+                    title="GoFit [original]" frameborder="0">
+                </iframe>
+            </div>
+        </div>
     </section>
 
-    <div class="container">
-        <section class="movie">
-            <div class="about">
-                <h1 class="title">Co robimy</h1>
-                <p class="describe">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, totam fugiat nulla
-                    dicta temporibus
-                    explicabo laboriosam, aspernatur rerum ab eum id sunt cumque molestias a animi repellendus non qui.
-                    Amet?</p>
+    <section id="offer">
+        <div class="service-section">
+            <div class="section-title">
+                <h1>Wybierz plan dla swojej firmy</h1>
             </div>
-            <div class="frame">
-                <div class="player">
-                    <iframe src="https://www.youtube.com/embed/_hNNaj4zd5w?rel=0" width="560" height="315"
-                        title="GoFit [original]" frameborder="0"></iframe>
+            <div class="services">
+                <div class="service-box">
+                    <div class="service-title">
+                        <h2>Plan Podstawowy</h2>
+                        <h2>4 zajęcia w miesiącu</h2>
+                    </div>
+                    <div class="service-info">
+                        <p><strong>Czas trwania zajęć</strong>: do 30min</p>
+                        <p><strong>Miejsce zajęć:</strong> przestrzeń biurowa, sala konferencyjna</p>
+                        <p><strong>Ubiór:</strong> strój codzienny, wygodne obuwie na płaskiej podeszwie</p>
+                        <p><strong>Data ważności:</strong> zajęcia ważne są 30 dni od daty rozpoczęcia zajęć</p>
+                        <p><strong>Ceny podane w tabeli są cenami brutto</strong></p>
+                    </div>
+                    <div class="service-main-info">
+                        <div class="option">
+                            <h3>Cena: 1800zł</h3>
+                            <h5>liczba uczestników do 10 osób</h5>
+                        </div>
+                        <div class="option">
+                            <h3>Cena: 3200zł</h3>
+                            <h5>liczba uczestników do 20 osób</h5>
+                        </div>
+                        <div class="option">
+                            <h3>Cena: 4800zł</h3>
+                            <h5>liczba uczestników do 30 osób</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-box">
+                    <div class="service-title">
+                        <h2>Plan Standart</h2>
+                        <h2>8 zajęcia w miesiącu</h2>
+                    </div>
+                    <div class="service-info">
+                        <p><strong>Czas trwania zajęć</strong>: do 30min</p>
+                        <p><strong>Miejsce zajęć:</strong> przestrzeń biurowa, sala konferencyjna</p>
+                        <p><strong>Ubiór:</strong> strój codzienny, wygodne obuwie na płaskiej podeszwie</p>
+                        <p><strong>Data ważności:</strong> zajęcia ważne są 30 dni od daty rozpoczęcia zajęć</p>
+                        <p><strong>Ceny podane w tabeli są cenami brutto</strong></p>
+
+                    </div>
+                    <div class="service-main-info">
+                        <div class="option">
+                            <h3>Cena: 1800zł</h3>
+                            <h5>liczba uczestników do 10 osób</h5>
+                        </div>
+                        <div class="option">
+                            <h3>Cena: 3200zł</h3>
+                            <h5>liczba uczestników do 20 osób</h5>
+                        </div>
+                        <div class="option">
+                            <h3>Cena: 4800zł</h3>
+                            <h5>liczba uczestników do 30 osób</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-box">
+                    <div class="service-title">
+                        <h2>Plan Premium</h2>
+                        <h2>12 zajęcia w miesiącu</h2>
+                    </div>
+                    <div class="service-info">
+                        <p><strong>Czas trwania zajęć</strong>: do 30min</p>
+                        <p><strong>Miejsce zajęć:</strong> przestrzeń biurowa, sala konferencyjna</p>
+                        <p><strong>Ubiór:</strong> strój codzienny, wygodne obuwie na płaskiej podeszwie</p>
+                        <p><strong>Data ważności:</strong> zajęcia ważne są 30 dni od daty rozpoczęcia zajęć</p>
+                        <p><strong>Ceny podane w tabeli są cenami brutto</strong></p>
+                    </div>
+                    <div class="service-main-info">
+                        <div class="option">
+                            <h3>Cena: 1800zł</h3>
+                            <h5>liczba uczestników do 10 osób</h5>
+                        </div>
+                        <div class="option">
+                            <h3>Cena: 3200zł</h3>
+                            <h5>liczba uczestników do 20 osób</h5>
+                        </div>
+                        <div class="option">
+                            <h3>Cena: 4800zł</h3>
+                            <h5>liczba uczestników do 30 osób</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="offer" id="offer">
-            <div class="box-1">
-                <h1 class="title">Wybierz plan dla swojej firmy</h1>
-            </div>
-
-            <div class="box-2">
-                <div class="offer-card">
-                    <h2 class="box-title">4 zajęcia w miesiącu</h2>
-                    <h3><strong>1800zł</strong></h3>
-                    <h5>liczba uczestników do 10 osób</h5>
-                    <h3><strong>3200zł</strong></h3>
-                    <h5>liczba uczestników do 20 osób</h5>
-                    <h3><strong>4800zł</strong></h3>
-                    <h5>liczba uczestników do 30 osób</h5>
+    <section id="team">
+        <div class="team-title">
+            <h1>Nasz Zespół</h1>
+        </div>
+        <div class="container">
+            <div class="trainer-team">
+                <div class="trainer-pic-1"></div>
+                <div class="trainer-name">
+                    <p>Marcin Wojtczak</p>
+                    <p>Trener Medyczny</p>
+                    <p>Trener Przygotwania Motorycznego</p>
+                    <p>Trener Personalny</p>
                 </div>
-
-                <div class="offer-card">
-                    <h2 class="box-title">8 zajęć w miesiącu</h2>
-                    <h3><strong>1800zł</strong></h3>
-                    <h5>liczba uczestników do 10 osób</h5>
-                    <h3><strong>3200zł</strong></h3>
-                    <h5>liczba uczestników do 20 osób</h5>
-                    <h3><strong>4800zł</strong></h3>
-                    <h5>liczba uczestników do 30 osób</h5>
-                </div>
-
-                <div class="offer-card">
-                    <h2 class="box-title">12 zajęć w miesiącu</h2>
-                    <h3><strong>1800zł</strong></h3>
-                    <h5>liczba uczestników do 10 osób</h5>
-                    <h3><strong>3200zł</strong></h3>
-                    <h5>liczba uczestników do 20 osób</h5>
-                    <h3><strong>4800zł</strong></h3>
-                    <h5>liczba uczestników do 30 osób</h5>
-                </div>
-            </div>
-
-            <div class="box-3">
-                <div class="info">
-                    <ul>
-                        <li>
-                            <p><strong>Czas trwania treningu:</strong> do 30min</p>
-                        </li>
-                        <li>
-                            <p><strong>Miejsce treningu:</strong> przestrzeń biurowa, sala konferencyjna</p>
-                        </li>
-                        <li>
-                            <p><strong>Ubiór:</strong>strój codzienny, wygodne obuwie na płaskiej podeszwie</p>
-                        </li>
-                        <li>
-                            <p><strong>Data ważności:</strong>:treningi ważne są 30 dni od daty rozpoczęcia zajęć</p>
-                        </li>
-                        <li>
-                            <p><strong>Ceny podane w tabeli są cenami brutto</strong></p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="team" id="about">
-            <div class="trainer">
-                <div class="pic-1">
-                    <!-- <img src="{{ url_for ('static', filename='images/marcin-200.png')}}" alt="" class="img">  -->
-                </div>
-                <div class="name">
-                    <h2>Marcin Wojtczak</h2>
-                    <h5>Trener Przygotwania Motorycznegoy</h5>
-                    <h5>Trener Medyczny</h5>
-                    <h5>Trener Personalny</h5>
-                </div>
-                <div class="describe">
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque numquam        accusamus nobis atque
-                        consequuntur explicabo aperiam neque distinctio incidunt reiciendis minus perspiciatis
-                        aspernatur esse, soluta officiis reprehenderit eligendi, doloribus culpa dolore, assumenda
-                        corporis animi. Tenetur soluta rerum facilis at doloribus ea officia exercitationem pariatur
-                        possimus. Debitis atque rerum sequi ducimus. Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. In quia dolores ab dicta eaque obcaecati voluptate possimus molestias? Debitis, ex.
+                <div class="trainer-info">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil quas sit inventore, modi dolorem
+                        commodi ullam dicta. Vel, harum tempore ipsum totam saepe ex, pariatur ipsa sunt animi porro
+                        magnam sit, obcaecati similique fuga? Eum dolorem ut voluptas quibusdam fuga?
                     </p>
                 </div>
             </div>
-            <div class="trainer">
-                <div class="pic-2">
-                    <!-- <img src="{{ url_for ('static', filename='images/robert-bt.png')}}" alt="" class="img">  -->
+
+            <div class="trainer-team">
+                <div class="trainer-pic-2"></div>
+                <div class="trainer-name">
+                    <p>Marcin Wojtczak</p>
+                    <p>Trener Medyczny</p>
+                    <p>Trener Przygotwania Motorycznego</p>
+                    <p>Trener Personalny</p>
                 </div>
-                <div class="name">
-                    <h2>Robert Kusiak</h2>
-                    <h5>Trener Przygotwania Motorycznego</h5>
-                    <h5>Trener Medyczny</h5>
-                    <h5>Trener Personalny</h5>
-                </div>
-                <div class="describe">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet commodi eos officiis cupiditate
-                        iusto ducimus molestiae provident vero possimus deleniti. Nesciunt aliquam veniam dolorum odit
-                        tempore odio consequuntur repudiandae sint sunt corrupti hic quas eius sit quos dolores nobis
-                        consequatur necessitatibus libero unde amet, illum facere quis, laborum quaerat? Corrupti,
-                        temporibus dolores. Accusantium sit molestiae, porro, earum nam laborum illo facilis quo ab id
-                        laboriosam, distinctio rerum expedita necessitatibus ratione?
+                <div class="trainer-info">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil quas sit inventore, modi dolorem
+                        commodi ullam
+                        dicta. Vel, harum tempore ipsum totam saepe ex, pariatur ipsa sunt animi porro magnam sit,
+                        obcaecati similique fuga?
+                        Eum dolorem ut voluptas quibusdam fuga?
                     </p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <footer>
-        <div class="footer" id="contact">
+    <section class="footer" id="contact">
+        <div class="contact">
+            <dic class="contact-info">
+                <h1>Skontaktuj się z nami</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo consequatur fuga, temporibus
+                    praesentium nulla ad reiciendis. Explicabo quos quas pariatur nisi aliquam corrupti laudantium
+                    dolorem reiciendis, veniam sint delectus assumenda consequatur repellat magnam tempore saepe soluta,
+                    excepturi earum? Minima illum quibusdam non laudantium quasi in natus voluptatum. Ex, quia
+                    distinctio?
+                </p>
+            </dic>
+
             <div class="contact-form">
-                <div class="header">
-                    <h1>Skontaktuj sie z nami</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla rem et non ipsam veritatis!
-                        Cumque nostrum corrupti ad facilis eligendi?</p>
-                </div>
-                <div class="card-box">
-                    <div class="container-1">
-                        <form action="/" method="POST">
-                            <div class="input-box">
-                                <input type="text" name="subject" placeholder="Temat" required>
-                            </div>
-                            <div class="input-box">
-                                <input type="text" name="company_name" placeholder="Nazwa Firmy">
-                            </div>
-                            <div class="input-box">
-                                <input type="text" name="email" placeholder="Email" required>
-                            </div>
-                            <div class="input-message">
-                                <textarea name="message" placeholder="Wiadomość" required></textarea>
-                            </div>
-                            <div class="button">
-                                <button type="submit">Wyślij</button>
-                            </div>
-                        </form>
+                <form action="/" method="POST">
+                    <div class="input-box">
+                        <input type="text" name="subject" placeholder="Temat" required>
                     </div>
+                    <div class="input-box">
+                        <input type="text" name="company_name" placeholder="Nazwa Firmy">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-message">
+                        <textarea name="message" placeholder="Wiadomość" required></textarea>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Wyślij</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="content-info">
+        <div class="column">
+            <div class="logo">
+                <a href="#main"><img src="{{ url_for('static', filename='img/logo_bw.svg')}}" width="152" height="52"alt=""></a>
+            </div>
+            <div class="social-media-icon">
+                <div class="facebook-icon">
+                    <img src="img/facebook-35.png" alt="">
+                </div>
+                <div class="instagram-icon">
+                    <img src="img/instagram-35.png" alt="">
+                </div>
+                <div class="linkedin-icon">
+                    <a href="https://www.linkedin.com/company/10136406/"><img src="img/linkedin-35.png" alt=""></a>
                 </div>
             </div>
-            <div class="container-2">
-                <div class="box box-copyright">
-                    <div class="footer-logo">
-                        <img src="{{ url_for ('static', filename='images/logo_wr.png')}}" alt="">
-                    </div>
-                </div>
-                <div class="box-nav">
-                    <a href="#main" class="nav-link">
-                        <p>Start</p>
-                    </a>
-                    <a href="#offer" class="nav-link">
-                        <p>Oferta</p>
-                    </a>
-                    <a href="#about" class="nav-link">
-                        <p>O Nas</p>
-                    </a>
-                    <a href="#contact" class="nav-link">
-                        <p>Kontakt</p>
-                    </a>
-                </div>
-                <div class="box-media">
-                    <p>Linkedin</p>
-                    <p>Facebook</p>
-                    <p>Instagram</p>
-                </div>
+        </div>
+
+        <div class="column">
+            <div class="menu">
+                <h5>Mapa Strony</h5>
+                <a href="#main">
+                    <p>Start</p>
+                </a>
+                <a href="#what-we-do">
+                    <p>Co Robimy</p>
+                </a>
+                <a href="#offer">
+                    <p>Oferta</p>
+                </a>
+                <a href="#team">
+                    <p>Zespół</p>
+                </a>
+                <a href="#contact">
+                    <p>Kontakt</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="menu">
+                <h5>Kontakt</h5>
+                <p>Nr telefonu: 531 787 144</p>
+                <p>Adres email: gofit@interia.pl</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="menu">
+                <p>&copy; 2022 GoFit</p>
             </div>
         </div>
     </footer>
